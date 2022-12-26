@@ -24,13 +24,14 @@ return function(use)
   })
 
   -- Vimspector, Graphical Debugging for the maniac :-D
-  use({
+  -- taken from https://alpha2phi.medium.com/neovim-for-beginners-debugging-using-vimspector-3b6762dbd115
+  use ({
     "puremourning/vimspector",
-    cmd = { "VimspectorInstall", "VimspectorUpdate" },
-    fn = { "vimspector#Launch()", "vimspector#ToggleBreakpoint", "vimspector#Continue" },
-    config = function()
-      require("config.vimspector").setup()
-    end,-- Keymaps
+    setup = function()
+      vim.g.vimspector_enable_mappings='HUMAN'
+    end,
+    config = function ()
+      vim.cmd [[packadd! vimspector]]
+    end
   })
-
 end
