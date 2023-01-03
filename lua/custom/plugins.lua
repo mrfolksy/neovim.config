@@ -1,4 +1,10 @@
 return function(use)
+  -- Yes I know that this is a depedency for other modules, but making sure
+  -- I explicitly add this plugin for Neovim plugin dev as I might drop plugins in the future
+  use({
+    "nvim-lua/plenary.nvim",
+  })
+
   -- Which-Key cos I can't remember my keymaps, this is a bit 
   -- of a cruch for me
   use({
@@ -27,10 +33,8 @@ return function(use)
   -- taken from https://alpha2phi.medium.com/neovim-for-beginners-debugging-using-vimspector-3b6762dbd115
   use ({
     "puremourning/vimspector",
-    setup = function()
-      vim.g.vimspector_enable_mappings='HUMAN'
-    end,
     config = function ()
+      vim.g.vimspector_enable_mappings='HUMAN' -- run PackerCompile if you change this
       vim.cmd [[packadd! vimspector]]
     end
   })
