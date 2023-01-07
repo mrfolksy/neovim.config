@@ -38,4 +38,9 @@ return function(use)
       vim.cmd [[packadd! vimspector]]
     end
   })
+
+  -- Gruvbox Theme
+  use ({
+    "ellisonleao/gruvbox.nvim"
+  })
 end
