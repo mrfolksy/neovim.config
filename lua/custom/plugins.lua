@@ -22,6 +22,11 @@ return function(use)
     }
   })
 
+  -- Toggleterm55
+  use({
+      "akinsho/toggleterm.nvim", tag = '*',
+  })
+
   -- using packer.nvim
   use ({
     "akinsho/bufferline.nvim",
