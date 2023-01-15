@@ -90,4 +90,8 @@ return function(use)
   use({
     "yonlu/omni.vim"
   })
+
+  use({
+    "rebelot/kanagawa.nvim"
+  })
 end
