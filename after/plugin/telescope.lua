@@ -31,8 +31,13 @@ vim.keymap.set('n', '<leader>sF', function ()
   require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})
 end, { desc = '[S]earch All [F]iles' })
 
+-- Search
 vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>so', require('telescope.builtin').oldfiles, { desc = '[S]earch [O]ld files' })
+
+-- LSP
+vim.keymap.set('n', '<leader>lsi', require('telescope.builtin').lsp_implementations, { desc = '[L]sp [s]earch [i]mplementations' })
+vim.keymap.set('n', '<leader>lss',  require('telescope.builtin').lsp_dynamic_workspace_symbols, { desc = '[L]sp [s]each [s]ymbols'})
