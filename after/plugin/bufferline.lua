@@ -12,6 +12,12 @@ bufferline.setup {
         text = "",
         text_align = "left",
         separator = true
+      },
+      {
+        filetype = "unix",
+        text = "",
+        text_align = "left",
+        separator = true
       }
     }
   }

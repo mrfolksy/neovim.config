@@ -40,6 +40,7 @@ return function(use)
     "puremourning/vimspector",
     config = function()
       vim.g.vimspector_enable_mappings = 'HUMAN' -- run PackerCompile if you change this
+      vim.g.vimspector_bottombar_height = 15
       vim.cmd [[packadd! vimspector]]
     end
   })
@@ -52,6 +53,10 @@ return function(use)
         -- Configuration here, or leave empty to use defaults
       })
     end
+  })
+
+  use({
+    "carlsmedstad/vim-bicep"
   })
 
   -- Themes ---------------------------------------
