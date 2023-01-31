@@ -59,6 +59,10 @@ return function(use)
     "carlsmedstad/vim-bicep"
   })
 
+  use({
+    "rafamadriz/friendly-snippets"
+  })
+
   -- Themes ---------------------------------------
   -- Gruvbox Theme
   use({
