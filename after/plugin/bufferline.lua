@@ -3,4 +3,22 @@ if not status then
   return
 end
 
-bufferline.setup {}
+bufferline.setup {
+  options = {
+    diagnostics = "nvim_lsp",
+    offsets = {
+      {
+        filetype = "neo-tree",
+        text = "",
+        text_align = "left",
+        separator = true
+      },
+      {
+        filetype = "unix",
+        text = "",
+        text_align = "left",
+        separator = true
+      }
+    }
+  }
+}
